@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/product.schema.json",
+    "title": "Link Tree Mustache Schema",
+    "description": "Defines format for data",
+    "type": "object",
+    "properties": {
+        "profile": {
+            "type": "object",
+            "properties": {
+                "image": {
+                    "description": "URL/path to image for profile",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Display name for page",
+                    "type": "string"
+                },
+                "bio": {
+                    "description": "Short bio describing page",
+                    "type": "string"
+                }
+            },
+            "required": ["image", "name"]
+        }
+    }
+  }
