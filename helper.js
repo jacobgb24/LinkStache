@@ -1,11 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('./data.json').then((response) => response.json()).then((json) => {     
-        render('profile', json.profile)
-
+        let body = document.getElementById("body");
+        body.innerHTML = Mustache.render(body.innerHTML, json);
     });
 });
-
-function render(elementId, data) {
-    let element = document.getElementById(elementId);
-    element.innerHTML = Mustache.render(element.innerHTML, data);
-}

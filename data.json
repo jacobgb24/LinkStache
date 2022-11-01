@@ -1,7 +1,10 @@
 {
     "profile": {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKr5wT7rfkjkGvNeqgXjBmarC5ZNoZs-H2uMpML8O7Q4F9W-IlUQibBT6IPqyvX45NOgw&usqp=CAU",
+        "picture": "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "name": "Test Name",
         "bio": "Test bio sadlasjdlsdsdsdd"
-    }
+    },
+    "links": [
+        {"text": "test1", "link": "https://example.com", "icon": "fa-brands fa-facebook"}
+    ]
 }

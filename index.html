@@ -1,14 +1,25 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Tree</title>
+    <title>Links</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" ></script>
     <script src="helper.js"></script>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Index</h1>
-    <div id="profile">
-
+<body id="body">
+    <div>
+        <img class="profile-picture" src="{{profile.picture}}"/>
+        <h1 class="profile-name">{{profile.name}}</h1>
+        <h4 class="profile-bio">{{profile.bio}}</h4>
+    </div>
+    <div class="links">
+        {{#links}}
+        <a class="link-item" href="{{link}}">
+            <id class="{{icon}}"></id>
+            {{text}}
+        </a>
+        {{/links}}
     </div>
 </body>
 </html>

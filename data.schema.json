@@ -1,14 +1,12 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://example.com/product.schema.json",
-    "title": "Link Tree Mustache Schema",
+    "title": "LinkStache Schema",
     "description": "Defines format for data",
     "type": "object",
     "properties": {
         "profile": {
             "type": "object",
             "properties": {
-                "image": {
+                "picture": {
                     "description": "URL/path to image for profile",
                     "type": "string"
                 },
@@ -21,7 +19,28 @@
                     "type": "string"
                 }
             },
-            "required": ["image", "name"]
+            "required": ["picture", "name"]
+        },
+        "links" : {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "description": "Text to show for link",
+                        "type": "string"
+                    },
+                    "link": {
+                        "description": "URL to link to",
+                        "type": "string"
+                    },
+                    "icon": {
+                        "description": "Optional icon to show. Must be the class(es) for a Font Awesome icon",
+                        "type": "string"
+                    }
+                },
+                "required": ["text", "link"]
+            }
         }
     }
   }
