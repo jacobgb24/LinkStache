@@ -6,5 +6,8 @@
     },
     "links": [
         {"text": "test1", "link": "https://example.com", "icon": "fa-brands fa-facebook"}
-    ]
+    ],
+    "style": {
+        "bgColor": "#ff0000"
+    }
 }

@@ -1,7 +1,10 @@
  /* initially based on https://github.com/johnggli/linktree/blob/master/style.css */
+ @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+ /* Use underscores for mustache since curly braces cause issues:  {{=__ __=}} */
 
 :root {
-    --bgColor: #223344;
+    --bgColor: __bgColor__;
     --bgColor2: #090a0f;
     --accentColor: #FFF;
     --font: 'Karla', sans-serif;
@@ -23,13 +26,13 @@ body {
     position: relative;
 }
 
-.profile-picture, #profilePicture img {
+.profile-picture {
     position: relative;
     width: 96px;
     height: 96px;
     display: block;
+    border-radius: 0%;
     margin: 40px auto 20px;
-    border-radius: 50%;
     -webkit-tap-highlight-color: transparent;
 }
 
