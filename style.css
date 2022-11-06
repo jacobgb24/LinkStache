@@ -67,6 +67,22 @@ body {
     margin: 27px auto;
 }
 
+.link-header {
+    position: relative;
+    background-color: transparent;
+    color: var(--accentColor);
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px; /* 17px */
+    text-decoration: none;
+    /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
+    -webkit-tap-highlight-color: transparent;
+}
+
 .link-item {
     position: relative;
     background-color: transparent;

@@ -5,9 +5,12 @@
         "bio": "Test bio sadlasjdlsdsdsdd"
     },
     "links": [
-        {"text": "test1", "link": "https://example.com", "icon": "fa-brands fa-facebook"}
+        {"section": "Section"},
+        {"text": "test1", "link": "https://example.com", "icon": "fa-brands fa-facebook"},
+        {"section": "Section2"},
+        {"text": "test2", "link": "https://example.com", "icon": "fa-brands fa-instagram"}
     ],
     "style": {
-        "bgColor": "#ff0000"
+        "bgColor": "#FF0FF200"
     }
 }

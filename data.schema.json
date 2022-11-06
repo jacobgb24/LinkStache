@@ -24,23 +24,48 @@
         "links" : {
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "text": {
-                        "description": "Text to show for link",
-                        "type": "string"
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "properties": {
+                            "text": {
+                                "description": "Text to show for link",
+                                "type": "string"
+                            },
+                            "link": {
+                                "description": "URL to link to",
+                                "type": "string"
+                            },
+                            "icon": {
+                                "description": "Optional icon to show. Must be the class(es) for a Font Awesome icon",
+                                "type": "string"
+                            }
+                        },
+                        "required": ["text", "link"]
                     },
-                    "link": {
-                        "description": "URL to link to",
-                        "type": "string"
-                    },
-                    "icon": {
-                        "description": "Optional icon to show. Must be the class(es) for a Font Awesome icon",
-                        "type": "string"
+                    {
+                        "type": "object",
+                        "properties": {
+                            "section": {
+                                "description": "Section header text",
+                                "type": "string"
+                            }
+                        }
                     }
-                },
-                "required": ["text", "link"]
+                ]
+                
+            }
+        },
+        "style": {
+            "type": "object",
+            "properties": {
+                "bgColor": {
+                    "description": "Color to use for background in #rrggbb",
+                    "type": "string",
+                    "pattern": "#[0-9a-fA-F]{6,8}"
+                }
             }
         }
-    }
+    },
+    "additionalProperties": false
   }
