@@ -15,6 +15,7 @@
         "circleProfile": true,
         "bgColor": "#01092C",
         "buttonRadius": 1000,
-        "outlinedButton": false
+        "outlinedButton": false,
+        "font": "Karla"
     }
 }

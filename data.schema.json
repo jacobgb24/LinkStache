@@ -75,6 +75,10 @@
                 "outlinedButton": {
                     "description": "If set, button will be transparent with an outline. False fills the button",
                     "type": "boolean"
+                },
+                "font": {
+                    "description": "The name of the font to use from Google Fonts",
+                    "type": "string"
                 }
             }
         }

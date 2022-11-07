@@ -1,13 +1,13 @@
  /* initially based on https://github.com/johnggli/linktree/blob/master/style.css */
- @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-
  /* Use underscores for mustache since curly braces cause issues:  {{=__ __=}} */
+ @import url('https://fonts.googleapis.com/css?family=__font__:400,700&display=swap');
+
 
 :root {
     --bgColor: __bgColor__;
     --bgColor2: #090a0f;
     --accentColor: #FFF;
-    --font: 'Karla', sans-serif;
+    --font: '__font__', sans-serif;
     --delay: .3s;
 }
 
