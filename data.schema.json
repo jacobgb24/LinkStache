@@ -80,7 +80,8 @@
                     "description": "The name of the font to use from Google Fonts",
                     "type": "string"
                 }
-            }
+            },
+            "minProperties": 5
         }
     },
     "additionalProperties": false
