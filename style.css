@@ -14,12 +14,11 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 100vh;    
     font-family: var(--font);
     background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
-    /* background-image: url('https://bit.ly/3nFVqJh'); */
     opacity: 0;
-    animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
+    animation: 1s ease-out var(--delay) 1 transitionAnimation;
     animation-fill-mode: forwards;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,7 +30,9 @@ body {
     width: 96px;
     height: 96px;
     display: block;
-    border-radius: 0%;
+    /*__#circleProfile__*/
+        border-radius: 50%;
+    /*__/circleProfile__*/
     margin: 40px auto 20px;
     -webkit-tap-highlight-color: transparent;
 }
@@ -64,7 +65,7 @@ body {
     max-width: 675px;
     width: auto;
     display: block;
-    margin: 27px auto;
+    margin: 0px auto;
 }
 
 .link-header {
@@ -74,45 +75,48 @@ body {
     font-size: 1rem;
     text-align: center;
     display: block;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 10px; /* 17px */
+    margin: 20px 10px 0px;
+    padding: 10px; 
     text-decoration: none;
-    /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
     -webkit-tap-highlight-color: transparent;
 }
 
 .link-item {
     position: relative;
-    background-color: transparent;
-    color: var(--accentColor);
+    /*__#outlinedButton__*/
+        background-color: transparent;
+        color: var(--accentColor);
+    /*__/outlinedButton__ __^outlinedButton__ */
+        background-color: var(--accentColor);
+        color: var(--bgColor);
+    /*__/outlinedButton__*/
+
     border: solid var(--accentColor) 2px;
-    border-radius: 10px;
+    border-radius: __buttonRadius__px;
+
     font-size: 1rem;
     text-align: center;
     display: block;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    padding: 10px; /* 17px */
+    padding: 10px;
     text-decoration: none;
-    /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
     -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) {
     .link-item:hover {
-        background-color: var(--accentColor);
-        color: var(--bgColor);
+        /*__#outlinedButton__*/
+            background-color: var(--accentColor);
+            color: var(--bgColor);
+        /*__/outlinedButton__ __^outlinedButton__ */
+            background-color: transparent;
+            color: var(--accentColor);
+        /*__/outlinedButton__*/
+        
     }
 }
-
-.link-item:active {
-    background-color: var(--accentColor);
-    color: var(--bgColor);
-}
-
 
 /*-------------------------animations-----------------------*/
 @keyframes transitionAnimation {

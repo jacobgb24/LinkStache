@@ -63,6 +63,18 @@
                     "description": "Color to use for background in #rrggbb",
                     "type": "string",
                     "pattern": "#[0-9a-fA-F]{6,8}"
+                },
+                "circleProfile": {
+                    "description": "If true, profile picture will be a cirlce (as opposed to square)",
+                    "type": "boolean"
+                },
+                "buttonRadius": {
+                    "description": "Radius of corners for buttons. 0=square, ~10=rounded, 1000=circle",
+                    "type": "integer"
+                },
+                "outlinedButton": {
+                    "description": "If set, button will be transparent with an outline. False fills the button",
+                    "type": "boolean"
                 }
             }
         }

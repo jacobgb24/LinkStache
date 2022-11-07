@@ -11,6 +11,9 @@
         {"text": "test2", "link": "https://example.com", "icon": "fa-brands fa-instagram"}
     ],
     "style": {
-        "bgColor": "#FF0FF200"
+        "circleProfile": true,
+        "bgColor": "#FF0000",
+        "buttonRadius": 1000,
+        "outlinedButton": false
     }
 }
