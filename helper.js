@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     fetch('./data.json').then((response) => response.json()).then((json) => {     
-        let body = document.getElementById("body");
-        body.innerHTML = Mustache.render(body.innerHTML, json);
+        let template = document.getElementById("template").innerHTML;
+        document.getElementById("target").innerHTML = Mustache.render(template, json);
+
+        document.title = json.profile.name
 
         fetch('./style.css').then((response) => response.text()).then((body) => {
             var style = document.createElement('style');

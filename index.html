@@ -1,30 +1,35 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Links</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" ></script>
-    <script src="helper.js"></script>
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <!-- style.css is loaded by javascript -->
 </head>
-<body id="body">
-    <div>
-        <img class="profile-picture" src="{{profile.picture}}"/>
-        <h1 class="profile-name">{{profile.name}}</h1>
-        <h2 class="profile-bio">{{profile.bio}}</h2>
-    </div>
-    <div class="links">
-        {{#links}}
-            {{#section}}
-                <h3 class="link-header">{{section}}</h3>
-            {{/section}}
-            {{^section}}
-            <a class="link-item" href="{{link}}">
-                <id class="{{icon}}"></id>
-                {{text}}
-            </a>
-            {{/section}}
-        {{/links}}
-    </div>
+<body>
+    <script id="template" type="">
+        <div>
+            <img class="profile-picture" src="{{profile.picture}}"/>
+            <h1 class="profile-name">{{profile.name}}</h1>
+            <h2 class="profile-bio">{{profile.bio}}</h2>
+        </div>
+        <div class="links">
+            {{#links}}
+                {{#section}}
+                    <h3 class="link-header">{{section}}</h3>
+                {{/section}}
+                {{^section}}
+                <a class="link-item" href="{{link}}">
+                    <id class="{{icon}}"></id>
+                    {{text}}
+                </a>
+                {{/section}}
+            {{/links}}
+        </div>
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" ></script>
+    <script src="helper.js"></script>
+    <div id="target"/>
 </body>
 </html>
