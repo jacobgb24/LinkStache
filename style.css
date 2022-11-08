@@ -1,6 +1,6 @@
  /* initially based on https://github.com/johnggli/linktree/blob/master/style.css */
  /* Use underscores for mustache since curly braces cause issues:  {{=__ __=}} */
- @import url('https://fonts.googleapis.com/css?family=__font__:400,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=__font__:500,700&display=swap');
 
 
 :root {
@@ -39,7 +39,7 @@ body {
 
 .profile-name {
     color: var(--accentColor);
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.25;
     display: block;
@@ -56,7 +56,7 @@ body {
     font-weight: bold;
     line-height: 1.25;
     display: block;
-    margin-top: 0;
+    margin-top: 4px;
     font-family: var(--font);
     width: 100%;
     text-align: center;
@@ -96,15 +96,23 @@ body {
     border: solid var(--accentColor) 2px;
     border-radius: __buttonRadius__px;
 
+    align-items: center;
     font-size: 1rem;
     text-align: center;
     display: block;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 16px;
+    font-weight: 500;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+.link-item > i {
+    position: absolute;
+    top: 50%;
+    left: 8px;
 }
 
 @media (hover: hover) {
