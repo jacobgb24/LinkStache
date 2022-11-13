@@ -1,6 +1,6 @@
 {
     "profile": {
-        "picture": "https://miro.medium.com/max/730/0*eA8mOiaMO8tJnrEe.png",
+        "picture": "https://i.imgur.com/SsQRaNE.png",
         "name": "LinkStache",
         "bio": "A LinkTree clone using Mustache templates"
     },
@@ -8,6 +8,7 @@
         {"section": "Project Links"},
         {"text": "Github", "link": "https://github.com/jacobgb24/LinkStache", "icon": "fa-brands fa-github"},
         {"text": "Mustache Templates", "link": "https://mustache.github.io/", "icon": "fa-solid fa-code"},
+        {"text": "JSON Schema", "link": "https://json-schema.org/", "icon": "fa-solid fa-list-check"},
         {"section": "Other Links"},
         {"text": "Example", "link": "https://example.com"}
     ],
