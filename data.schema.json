@@ -60,11 +60,6 @@
         "style": {
             "type": "object",
             "properties": {
-                "bgColor": {
-                    "description": "Color to use for background in #rrggbb",
-                    "type": "string",
-                    "pattern": "#[0-9a-fA-F]{6,8}"
-                },
                 "circleProfile": {
                     "description": "If true, profile picture will be a cirlce (as opposed to square)",
                     "type": "boolean"
@@ -80,9 +75,23 @@
                 "font": {
                     "description": "The name of the font to use from Google Fonts",
                     "type": "string"
+                },
+                "gradientBg": {
+                    "description": "If set uses gradient background instead of flat color",
+                    "type": "boolean"
+                },
+                "bgColor": {
+                    "description": "Color to use for background in #rrggbb",
+                    "type": "string",
+                    "pattern": "#[0-9a-fA-F]{6,8}"
+                },
+                "buttonColor": {
+                    "description": "Color to use for text and button backgrounds in #rrggbb",
+                    "type": "string",
+                    "pattern": "#[0-9a-fA-F]{6,8}"
                 }
             },
-            "minProperties": 5
+            "minProperties": 7
         }
     },
     "additionalProperties": false

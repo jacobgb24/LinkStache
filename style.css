@@ -5,8 +5,7 @@
 
 :root {
     --bgColor: __bgColor__;
-    --bgColor2: #090a0f;
-    --accentColor: #FFF;
+    --buttonColor: __buttonColor__;
     --font: '__font__', sans-serif;
     --delay: .3s;
 }
@@ -16,7 +15,11 @@ body {
     padding: 0;
     min-height: 100vh;    
     font-family: var(--font);
-    background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
+    /* __#gradientBg__ */
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2),  transparent) var(--bgColor);
+    /*__/gradientBg__ __^gradientBg__ */
+    background: var(--bgColor);
+    /* __/gradientBg__ */
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation;
     animation-fill-mode: forwards;
@@ -24,7 +27,7 @@ body {
     background-size: cover;
     position: relative;
 }
-
+/* 3c5b67 */
 .profile-picture {
     position: relative;
     width: 96px;
@@ -38,7 +41,7 @@ body {
 }
 
 .profile-name {
-    color: var(--accentColor);
+    color: var(--buttonColor);
     font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.25;
@@ -51,7 +54,7 @@ body {
 }
 
 .profile-bio {
-    color: var(--accentColor);
+    color: var(--buttonColor);
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.25;
@@ -73,7 +76,7 @@ body {
 .link-header {
     position: relative;
     background-color: transparent;
-    color: var(--accentColor);
+    color: var(--buttonColor);
     font-size: 1rem;
     text-align: center;
     display: block;
@@ -87,13 +90,13 @@ body {
     position: relative;
     /*__#outlinedButton__*/
         background-color: transparent;
-        color: var(--accentColor);
+        color: var(--buttonColor);
     /*__/outlinedButton__ __^outlinedButton__ */
-        background-color: var(--accentColor);
+        background-color: var(--buttonColor);
         color: var(--bgColor);
     /*__/outlinedButton__*/
 
-    border: solid var(--accentColor) 2px;
+    border: solid var(--buttonColor) 2px;
     border-radius: __buttonRadius__px;
 
     align-items: center;
@@ -118,11 +121,11 @@ body {
 @media (hover: hover) {
     .link-item:hover {
         /*__#outlinedButton__*/
-            background-color: var(--accentColor);
+            background-color: var(--buttonColor);
             color: var(--bgColor);
         /*__/outlinedButton__ __^outlinedButton__ */
             background-color: transparent;
-            color: var(--accentColor);
+            color: var(--buttonColor);
         /*__/outlinedButton__*/
         
     }
