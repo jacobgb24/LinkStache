@@ -11,7 +11,7 @@ You can see an example using this repository on Github Pages: https://jacobgb24.
 ## Usage
 This repository can be easily forked (or used as a template) to create your own site.
 Only `data.json` needs to be edited.
-This can be done with a text editor or via GUI by opening `_builder.html` in your browser.
+This can be done with a text editor or via GUI by opening `gui_builder.html` in your browser either locally or from [GH Pages](https://jacobgb24.github.io/LinkStache/gui_builder.html)
 
 ## Features
 * Profile picture, name, and bio
