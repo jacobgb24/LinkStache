@@ -14,7 +14,7 @@
         "icon": "fa-brands fa-github"
       },
       {
-        "text": "GUI Editor (not visible on GH Pages)",
+        "text": "GUI Editor",
         "link": "gui_builder.html",
         "icon": "fa-solid fa-shapes"
       },
