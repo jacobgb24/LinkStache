@@ -1,19 +1,20 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "LinkStache Schema",
-    "description": "Defines format for data",
+    "format": "categories",
     "type": "object",
     "properties": {
         "profile": {
             "type": "object",
+            "title": "Profile Info",
             "properties": {
                 "picture": {
                     "description": "URL/path to image for profile",
-                    "type": "string"
+                    "$ref": "#/$defs/nonEmptyString"
                 },
                 "name": {
                     "description": "Display name for page",
-                    "type": "string"
+                    "$ref": "#/$defs/nonEmptyString"
                 },
                 "bio": {
                     "description": "Short bio describing page",
@@ -24,34 +25,41 @@
         },
         "links" : {
             "type": "array",
+            "title": "Links",
+            "format": "table",
             "items": {
                 "anyOf": [
                     {
                         "type": "object",
+                        "title": "Link",
                         "properties": {
                             "text": {
                                 "description": "Text to show for link",
-                                "type": "string"
+                                "$ref": "#/$defs/nonEmptyString"
                             },
                             "link": {
                                 "description": "URL to link to",
-                                "type": "string"
+                                "format": "url",
+                                "$ref": "#/$defs/nonEmptyString"
                             },
                             "icon": {
                                 "description": "Optional icon to show. Must be the class(es) for a Font Awesome icon",
                                 "type": "string"
                             }
                         },
-                        "required": ["text", "link"]
+                        "required": ["text", "link"],
+                        "additionalProperties": false
                     },
                     {
                         "type": "object",
+                        "title": "Section Header",
                         "properties": {
                             "section": {
                                 "description": "Section header text",
-                                "type": "string"
+                                "$ref": "#/$defs/nonEmptyString"
                             }
-                        }
+                        },
+                        "additionalProperties": false
                     }
                 ]
                 
@@ -59,10 +67,12 @@
         },
         "style": {
             "type": "object",
+            "title": "Style",
             "properties": {
                 "circleProfile": {
                     "description": "If true, profile picture will be a cirlce (as opposed to square)",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "format": "checkbox"
                 },
                 "buttonRadius": {
                     "description": "Radius of corners for buttons. 0=square, ~10=rounded, 1000=circle",
@@ -70,29 +80,37 @@
                 },
                 "outlinedButton": {
                     "description": "If set, button will be transparent with an outline. False fills the button",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "format": "checkbox"
                 },
                 "font": {
                     "description": "The name of the font to use from Google Fonts",
-                    "type": "string"
+                    "$ref": "#/$defs/nonEmptyString"
                 },
                 "gradientBg": {
                     "description": "If set uses gradient background instead of flat color",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "format": "checkbox"
                 },
                 "bgColor": {
-                    "description": "Color to use for background in #rrggbb",
+                    "description": "Color to use for background",
                     "type": "string",
-                    "pattern": "#[0-9a-fA-F]{6,8}"
+                    "format": "color"
                 },
                 "buttonColor": {
-                    "description": "Color to use for text and button backgrounds in #rrggbb",
+                    "description": "Color to use for text and button backgrounds",
                     "type": "string",
-                    "pattern": "#[0-9a-fA-F]{6,8}"
+                    "format": "color"
                 }
             },
             "minProperties": 7
         }
     },
-    "additionalProperties": false
+    "additionalProperties": false,
+    "$defs": {
+        "nonEmptyString": {
+            "type": "string",
+            "minLength": 1
+        }
+    }
   }

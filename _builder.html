@@ -37,17 +37,19 @@
     </script>
     <style>
         #submit {
-            position: fixed;
             top: 4px;
-            right: 4px;
+            right: 50%;
         }
     </style>
 </head>
 
 <body class="container grid-md p-2">
-    <h1>GUI data.json Editor</h1>
+    <h1>GUI Data Editor</h1>
+    <p class="mb-0">On Load, the current values from <code>data.json</code> are used.</p> 
+    <p>Make any desired edits then click the copy button and paste the result back into <code>data.json</code> to update the site contents.</p>
+    <button id='submit' class="btn btn-lg btn-primary float-right">Copy Data to Clipboard</button>
     <div id='editor_holder'></div>
-    <button id='submit' class="btn btn-primary p-fixed">Copy Data to Clipboard</button>
+
 
 </body>
 
