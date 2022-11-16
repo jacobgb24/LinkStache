@@ -8,6 +8,12 @@ Use of the schema 1) allows users to ensure data is formatted correctly and 2) p
 
 You can see an example using this repository on Github Pages: https://jacobgb24.github.io/LinkStache/
 
+<p align="center">
+  <a href="https://jacobgb24.github.io/LinkStache/">
+    <img width=600 src="https://i.imgur.com/x3cUkqC.png"/>
+  </a>
+ </p>
+
 ## Usage
 This repository can be easily forked (or used as a template) to create your own site.
 Only `data.json` needs to be edited.
