@@ -13,7 +13,7 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;    
+    min-height: 100vh;
     font-family: var(--font);
     /* __#gradientBg__ */
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2),  transparent) var(--bgColor);
@@ -27,7 +27,7 @@ body {
     background-size: cover;
     position: relative;
 }
-/* 3c5b67 */
+
 .profile-picture {
     position: relative;
     width: 96px;
