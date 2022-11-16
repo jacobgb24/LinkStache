@@ -4,17 +4,17 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
     <title>GUI Data Editor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <script>
+         let dataFetch = fetch('./data.json').then((response) => response.json());
+        let schemaFetch = fetch('./data.schema.json').then((response) => response.json());
         document.addEventListener('DOMContentLoaded', () => {
-            let dataFetch = fetch('./data.json').then((response) => response.json());
-            let schemaFetch = fetch('./data.schema.json').then((response) => response.json());
-
-            Promise.all([dataFetch, schemaFetch]).then((response) => {setup(response[0], response[1])});
+            Promise.all([dataFetch, schemaFetch]).then(([data, schema]) => setup(data, schema));
         });
 
         function setup(data, schema) {

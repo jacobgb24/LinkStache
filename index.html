@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title></title>
+    <title><!-- set by helper.js to profile name --></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" ></script>
     <script src="helper.js"></script>
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <!-- style.css is loaded by javascript -->
+    <!-- style.css is loaded by helper.js -->
 </head>
 <body>
-    <script id="template" type="">
+    <script id="template" type="x-tmpl-mustache">
         <div>
             <img class="profile-picture" src="{{profile.picture}}"/>
             <h1 class="profile-name">{{profile.name}}</h1>
