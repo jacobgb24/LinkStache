@@ -14,3 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// for gui_editor preview. Only allow from own origin
+window.addEventListener('message', event => {
+    if (window.location.origin === event.origin) {
+        let template = document.getElementById("template").innerHTML;
+        document.getElementById("target").innerHTML = Mustache.render(template, event.data);
+    }
+})
