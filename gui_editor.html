@@ -37,7 +37,9 @@
 
             // pass changes to iframe
             editor.on('change',() => {
-                document.getElementById("preview").contentWindow.postMessage(editor.getValue(), "*")
+                if (editor.validate().length == 0) {
+                    document.getElementById("preview").contentWindow.postMessage(editor.getValue(), "*")
+                }
             });
 
         }
