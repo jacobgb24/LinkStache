@@ -44,6 +44,7 @@
       "font": "Karla",
       "gradientBg": true,
       "bgColor": "#01092c",
-      "buttonColor": "#eeeeee"
+      "buttonColor": "#eeeeee",
+      "iconSize": "xl"
     }
   }

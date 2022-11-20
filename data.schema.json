@@ -116,9 +116,19 @@
                     "description": "Color to use for text and button backgrounds",
                     "type": "string",
                     "format": "color"
+                },
+                "iconSize": {
+                    "title": "Icon Size",
+                    "description": "Size for icons in links",
+                    "type": "string",
+                    "enum": ["lg", "xl", "2xl"],
+                    "options": {
+                        "enum_titles": ["Small", "Medium", "Large"]
+                    }
                 }
             },
-            "required": ["circleProfile", "buttonCorners", "outlinedButton", "font", "gradientBg", "bgColor", "buttonColor"]
+            "required": ["circleProfile", "buttonCorners", "outlinedButton", "font", "gradientBg", "bgColor", 
+                         "buttonColor", "iconSize"]
         }
     },
     "additionalProperties": false,
