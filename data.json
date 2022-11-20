@@ -39,7 +39,7 @@
     ],
     "style": {
       "circleProfile": true,
-      "buttonRadius": 1000,
+      "buttonCorners": "round",
       "outlinedButton": false,
       "font": "Karla",
       "gradientBg": true,

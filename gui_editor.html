@@ -13,6 +13,7 @@
     <script>
         let dataFetch = fetch('./data.json').then((response) => response.json());
         let schemaFetch = fetch('./data.schema.json').then((response) => response.json());
+
         document.addEventListener('DOMContentLoaded', () => {
             Promise.all([dataFetch, schemaFetch]).then(([data, schema]) => setup(data, schema));
         });

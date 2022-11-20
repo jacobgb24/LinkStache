@@ -75,15 +75,22 @@
             "title": "Style",
             "properties": {
                 "circleProfile": {
+                    "title": "Circular Profile Picture",
                     "description": "If true, profile picture will be a cirlce (as opposed to square)",
                     "type": "boolean",
                     "format": "checkbox"
                 },
-                "buttonRadius": {
-                    "description": "Radius of corners for buttons. 0=square, ~10=rounded, 1000=circle",
-                    "type": "integer"
+                "buttonCorners": {
+                    "title": "Button Corners",
+                    "description": "Style for link button corners",
+                    "type": "string",
+                    "enum": ["round", "square", "roundedsquare"],
+                    "options": {
+                        "enum_titles": ["Round", "Square", "Rounded Square"]
+                    }
                 },
                 "outlinedButton": {
+                    "title": "Outlined Buttons",
                     "description": "If set, button will be transparent with an outline. False fills the button",
                     "type": "boolean",
                     "format": "checkbox"
@@ -93,22 +100,25 @@
                     "$ref": "#/$defs/nonEmptyString"
                 },
                 "gradientBg": {
+                    "title": "Use Gradient Background",
                     "description": "If set uses gradient background instead of flat color",
                     "type": "boolean",
                     "format": "checkbox"
                 },
                 "bgColor": {
+                    "title": "Background Color",
                     "description": "Color to use for background",
                     "type": "string",
                     "format": "color"
                 },
                 "buttonColor": {
+                    "title": "Button Color",
                     "description": "Color to use for text and button backgrounds",
                     "type": "string",
                     "format": "color"
                 }
             },
-            "minProperties": 7
+            "required": ["circleProfile", "buttonCorners", "outlinedButton", "font", "gradientBg", "bgColor", "buttonColor"]
         }
     },
     "additionalProperties": false,
