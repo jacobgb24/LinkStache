@@ -21,7 +21,7 @@ This can be done with a text editor or via GUI by opening `gui_editor.html` in y
 The GUI editor will provide a live preview of your site (if you are editing from a desktop).
 
 <p align="center">
-  <a href="https://jacobgb24.github.io/LinkStache/">
+  <a href="https://jacobgb24.github.io/LinkStache/gui_editor.html">
     <img width=600 src="https://i.imgur.com/ijfEJJx.png"/>
   </a>
  </p>
