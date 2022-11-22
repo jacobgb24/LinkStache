@@ -17,7 +17,17 @@
             <h1 class="profile-name">{{profile.name}}</h1>
             <h2 class="profile-bio">{{profile.bio}}</h2>
         </div>
-        <div class="links">
+
+        <!-- May get moved to bottom depending on style -->
+        <div id="icon-links">
+            {{#iconLinks}}
+                <a class="icon-link" href="{{link}}">
+                    <i class="{{icon}} fa-2xl"></i>
+                </a>
+            {{/iconLinks}}
+        </div>
+
+        <div id="links">
             {{#links}}
                 {{#section}}
                     <h3 class="link-header">{{section}}</h3>

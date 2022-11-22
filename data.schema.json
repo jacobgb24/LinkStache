@@ -70,6 +70,34 @@
                 ]
             }
         },
+        "iconLinks": {
+            "description": "Set of clickable icons",
+            "title": "Icon Links",
+            "format": "tabs",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "Icon",
+                "properties": {
+                    "link": {
+                        "title": "Link",
+                        "description": "URL to link to",
+                        "format": "url",
+                        "$ref": "#/$defs/nonEmptyString"
+                    },
+                    "icon": {
+                        "description": "Icon to show. Must be the class(es) for a Font Awesome icon",
+                        "type": "string",
+                        "title": "Icon"
+                    }
+                },
+                "required": [
+                    "icon",
+                    "link"
+                ]
+            },
+            "maxItems": 7
+        },
         "style": {
             "type": "object",
             "title": "Style",
@@ -84,9 +112,17 @@
                     "title": "Button Corners",
                     "description": "Style for link button corners",
                     "type": "string",
-                    "enum": ["round", "square", "roundedsquare"],
+                    "enum": [
+                        "round",
+                        "square",
+                        "roundedsquare"
+                    ],
                     "options": {
-                        "enum_titles": ["Round", "Square", "Rounded Square"]
+                        "enum_titles": [
+                            "Round",
+                            "Square",
+                            "Rounded Square"
+                        ]
                     }
                 },
                 "outlinedButton": {
@@ -119,16 +155,44 @@
                 },
                 "iconSize": {
                     "title": "Icon Size",
-                    "description": "Size for icons in links",
+                    "description": "Size for icons",
                     "type": "string",
-                    "enum": ["lg", "xl", "2xl"],
+                    "enum": [
+                        "lg",
+                        "xl",
+                        "2xl"
+                    ],
                     "options": {
-                        "enum_titles": ["Small", "Medium", "Large"]
+                        "enum_titles": [
+                            "Small",
+                            "Medium",
+                            "Large"
+                        ]
+                    }
+                },
+                "iconLinksTop": {
+                    "type": "boolean",
+                    "description": "Whether icon links should be above or below other links",
+                    "title": "Icon Links Position",
+                    "options": {
+                        "enum_titles": [
+                            "Top",
+                            "Bottom"
+                        ]
                     }
                 }
             },
-            "required": ["circleProfile", "buttonCorners", "outlinedButton", "font", "gradientBg", "bgColor", 
-                         "buttonColor", "iconSize"]
+            "required": [
+                "circleProfile",
+                "buttonCorners",
+                "outlinedButton",
+                "font",
+                "gradientBg",
+                "bgColor",
+                "buttonColor",
+                "iconSize",
+                "iconLinksTop"
+            ]
         }
     },
     "additionalProperties": false,

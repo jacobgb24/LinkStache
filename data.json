@@ -1,50 +1,61 @@
 {
-    "profile": {
-      "picture": "https://i.imgur.com/SsQRaNE.png",
-      "name": "LinkStache",
-      "bio": "A LinkTree clone using Mustache templates"
+  "profile": {
+    "picture": "https://i.imgur.com/SsQRaNE.png",
+    "name": "LinkStache",
+    "bio": "A LinkTree clone using Mustache templates"
+  },
+  "links": [
+    {
+      "section": "Project Links"
     },
-    "links": [
-      {
-        "section": "Project Links"
-      },
-      {
-        "text": "Github",
-        "link": "https://github.com/jacobgb24/LinkStache",
-        "icon": "fa-brands fa-github"
-      },
-      {
-        "text": "GUI Editor",
-        "link": "gui_editor.html",
-        "icon": "fa-solid fa-shapes"
-      },
-      {
-        "section": "Tools Used"
-      },
-      {
-        "text": "Mustache Templates",
-        "link": "https://mustache.github.io/",
-        "icon": "fa-solid fa-code"
-      },
-      {
-        "text": "JSON Schema",
-        "link": "https://json-schema.org/",
-        "icon": "fa-solid fa-list-check"
-      },
-      {
-        "text": "JSON Editor",
-        "link": "https://github.com/json-editor/json-editor",
-        "icon": "fa-solid fa-pen"
-      }
-    ],
-    "style": {
-      "circleProfile": true,
-      "buttonCorners": "round",
-      "outlinedButton": false,
-      "font": "Karla",
-      "gradientBg": true,
-      "bgColor": "#01092c",
-      "buttonColor": "#eeeeee",
-      "iconSize": "xl"
+    {
+      "text": "Github",
+      "link": "https://github.com/jacobgb24/LinkStache",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "text": "GUI Editor",
+      "link": "gui_editor.html",
+      "icon": "fa-solid fa-shapes"
+    },
+    {
+      "section": "Tools Used"
+    },
+    {
+      "text": "Mustache Templates",
+      "link": "https://mustache.github.io/",
+      "icon": "fa-solid fa-code"
+    },
+    {
+      "text": "JSON Schema",
+      "link": "https://json-schema.org/",
+      "icon": "fa-solid fa-list-check"
+    },
+    {
+      "text": "JSON Editor",
+      "link": "https://github.com/json-editor/json-editor",
+      "icon": "fa-solid fa-pen"
     }
+  ],
+  "iconLinks": [
+    {
+      "link": "https://github.com/jacobgb24/LinkStache",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "link": "https://github.com/jacobgb24",
+      "icon": "fa-solid fa-user"
+    }
+  ],
+  "style": {
+    "circleProfile": true,
+    "buttonCorners": "round",
+    "outlinedButton": false,
+    "font": "Karla",
+    "gradientBg": true,
+    "bgColor": "#01092c",
+    "buttonColor": "#eeeeee",
+    "iconSize": "xl",
+    "iconLinksTop": false
   }
+}
