@@ -28,5 +28,5 @@ jobs:
         pip install check-jsonschema
     - name: Test json
       run: |
-        check-jsonschema --schemafile data.schema.json data.json
+        check-jsonschema --schemafile data.schema.json data.json --traceback-mode full
 
