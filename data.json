@@ -52,6 +52,7 @@
     "buttonCorners": "round",
     "outlinedButton": false,
     "font": "Karla",
+    "gradientBg": true,
     "bgColor": "#01092c",
     "buttonColor": "#eeeeee",
     "iconSize": "xl",
