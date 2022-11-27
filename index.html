@@ -33,10 +33,23 @@
                     <h3 class="link-header">{{section}}</h3>
                 {{/section}}
                 {{^section}}
-                <a class="link-item" href="{{link}}">
-                    <i class="{{icon}} fa-{{style.iconSize}}"></i>
-                    <span>{{text}}</span>
-                </a>
+                {{#image}}
+                    <!-- only add a tag if there is a link -->
+                    {{#link}}
+                        <a href="{{link}}">
+                            <img class="link-image" src="{{image}}"></img>
+                        </a>
+                    {{/link}}
+                    {{^link}}
+                        <img class="link-image" src="{{image}}"></img>
+                    {{/link}}
+                {{/image}}
+                {{^image}}
+                    <a class="link-item" href="{{link}}">
+                        <i class="{{icon}} fa-{{style.iconSize}}"></i>
+                        <span>{{text}}</span>
+                    </a>
+                {{/image}}
                 {{/section}}
             {{/links}}
         </div>

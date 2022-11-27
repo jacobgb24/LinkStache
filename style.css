@@ -12,6 +12,10 @@
     --button-rad-square: 0px;
     --button-rad-roundedsquare: 10px;
     --button-rad: var(--button-rad-__buttonCorners__);
+
+    --image-rad-square: 0px;
+    --image-rad-roundedsquare: 10px;
+    --image-rad: var(--image-rad-__imageCorners__);
 }
 
 body {
@@ -120,6 +124,13 @@ body {
     position: absolute;
     top: 50%;
     left: 8px;
+}
+
+.link-image {
+    display: block;
+    width: 75%;
+    margin: 10px auto;
+    border-radius: var(--image-rad);
 }
 
 #icon-links {

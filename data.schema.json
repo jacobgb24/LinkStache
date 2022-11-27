@@ -66,6 +66,23 @@
                             }
                         },
                         "additionalProperties": false
+                    },
+                    {
+                        "type": "object",
+                        "title": "Image",
+                        "properties": {
+                            "image": {
+                                "description": "Image to show",
+                                "format": "url",
+                                "$ref": "#/$defs/nonEmptyString"
+                            },
+                            "link": {
+                                "description": "Link to go to when image is clicked",
+                                "format": "url",
+                                "$ref": "#/$defs/nonEmptyString"
+                            }
+                        },
+                        "required": ["image"]
                     }
                 ]
             }
@@ -131,6 +148,21 @@
                     "type": "boolean",
                     "format": "checkbox"
                 },
+                "imageCorners": {
+                    "title": "Image Corners",
+                    "description": "Style for images in links section",
+                    "type": "string",
+                    "enum": [
+                        "square",
+                        "roundedsquare"
+                    ],
+                    "options": {
+                        "enum_titles": [
+                            "Square",
+                            "Rounded Square"
+                        ]
+                    }
+                },
                 "font": {
                     "description": "The name of the font to use from Google Fonts",
                     "$ref": "#/$defs/nonEmptyString"
@@ -186,6 +218,7 @@
                 "circleProfile",
                 "buttonCorners",
                 "outlinedButton",
+                "imageCorners",
                 "font",
                 "gradientBg",
                 "bgColor",

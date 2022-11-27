@@ -35,6 +35,13 @@
       "text": "JSON Editor",
       "link": "https://github.com/json-editor/json-editor",
       "icon": "fa-solid fa-pen"
+    },
+    {
+      "section": "Image Example"
+    },
+    {
+      "image": "https://i.imgur.com/zlxYWCJ.jpeg",
+      "link": "https://example.com"
     }
   ],
   "iconLinks": [
@@ -51,6 +58,7 @@
     "circleProfile": true,
     "buttonCorners": "round",
     "outlinedButton": false,
+    "imageCorners": "square",
     "font": "Karla",
     "gradientBg": true,
     "bgColor": "#01092c",
