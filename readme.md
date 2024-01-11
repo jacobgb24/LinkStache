@@ -10,7 +10,7 @@ You can see an example using this repository on Github Pages: https://jacobgb24.
 
 <p align="center">
   <a href="https://jacobgb24.github.io/LinkStache/">
-    <img width=600 src="https://i.imgur.com/x3cUkqC.png"/>
+    <img width=600 src="https://imgur.com/dprHxKk.png"/>
   </a>
  </p>
 
