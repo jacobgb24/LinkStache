@@ -30,25 +30,31 @@
         <div id="links">
             {{#blocks}}
                 {{#headerBlock}}
-                    <h3 class="link-header">{{text}}</h3>
+                    <h3 class="header-block">{{{text}}}</h3>
                 {{/headerBlock}}
+                {{#textBlock}}
+                    <div class="text-block">{{{text}}}</div>
+                {{/textBlock}}
                 {{#imageBlock}}
                     <!-- only add a tag if there is a link -->
                     {{#link}}
                         <a href="{{link}}">
-                            <img class="link-image" src="{{image}}"></img>
+                            <img class="image-block" src="{{image}}"></img>
                         </a>
                     {{/link}}
                     {{^link}}
-                        <img class="link-image" src="{{image}}"></img>
+                        <img class="image-block" src="{{image}}"></img>
                     {{/link}}
                 {{/imageBlock}}
                 {{#linkBlock}}
-                    <a class="link-item" href="{{link}}">
+                    <a class="link-block" href="{{link}}">
                         <i class="{{icon}} fa-{{style.iconSize}}"></i>
                         <span>{{text}}</span>
                     </a>
                 {{/linkBlock}}
+                {{#htmlBlock}}
+                    <div class="html-block">{{{content}}}</div>
+                {{/htmlBlock}}
 
             {{/blocks}}
         </div>

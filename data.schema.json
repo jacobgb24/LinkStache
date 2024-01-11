@@ -28,7 +28,8 @@
         },
         "blocks": {
             "type": "array",
-            "title": "Links",
+            "title": "Blocks",
+            "description": "Content blocks such as headers, links, or text",
             "format": "table",
             "items": {
                 "anyOf": [
@@ -77,6 +78,20 @@
                     },
                     {
                         "type": "object",
+                        "title": "Text",
+                        "properties": {
+                            "block": {
+                                "enum": ["text"],
+                                "$ref": "#/$defs/hidden"
+                            },
+                            "text": {
+                                "description": "Text contents. Supports style tags",
+                                "$ref": "#/$defs/nonEmptyString"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
                         "title": "Image",
                         "properties": {
                             "block": {
@@ -95,6 +110,20 @@
                             }
                         },
                         "required": ["image"]
+                    },
+                    {
+                        "type": "object",
+                        "title": "HTML",
+                        "properties": {
+                            "block": {
+                                "enum": ["html"],
+                                "$ref": "#/$defs/hidden"
+                            },
+                            "file": {
+                                "description": "HTML file to load (preview does not update on file change)",
+                                "$ref": "#/$defs/nonEmptyString"
+                            }
+                        }
                     }
                 ],
                 "required": ["block"]

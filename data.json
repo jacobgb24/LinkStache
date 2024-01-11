@@ -45,7 +45,15 @@
     },
     {
       "block": "header",
-      "text": "Image Example"
+      "text": "Other Block Examples"
+    },
+    {
+      "block": "text",
+      "text": "This is a text block. <i>You can add html tags for additional style</i>"
+    },
+    {
+      "block": "html",
+      "file": "html_block_example.html"
     },
     {
       "block": "image",

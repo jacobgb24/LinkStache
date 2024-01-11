@@ -81,7 +81,7 @@ body {
     display: block;
 }
 
-.link-header {
+.header-block, .text-block {
     position: relative;
     background-color: transparent;
     color: var(--button-color);
@@ -94,7 +94,12 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-.link-item {
+.text-block {
+    font-weight: 500;
+    margin-top: 0;
+}
+
+.link-block {
     position: relative;
     /*__#outlinedButton__*/
         background-color: transparent;
@@ -120,17 +125,25 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-.link-item > i {
+.link-block > i {
     position: absolute;
     top: 50%;
     left: 8px;
 }
 
-.link-image {
+.image-block {
     display: block;
     width: 75%;
     margin: 10px auto;
     border-radius: var(--image-rad);
+}
+
+.html-block {
+    position: relative;
+    background-color: transparent;
+    color: var(--button-color);
+    display: block;
+    padding: 10px;
 }
 
 #icon-links {
@@ -151,7 +164,7 @@ body {
 }
 
 @media (hover: hover) {
-    .link-item:hover {
+    .link-block:hover {
         /*__#outlinedButton__*/
             background-color: var(--button-color);
             color: var(--bg-color);

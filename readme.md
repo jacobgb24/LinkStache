@@ -28,7 +28,7 @@ The GUI editor will provide a live preview of your site (if you are editing from
  
 ## Features
 * Profile picture, name, and bio
-* Support for links with icons
-* Section headers
+* Support for links and section headers like
+* Additional support for text, image, and html blocks
 * Customizable style similar to what LinkTree's free version offers. (See the schema for what can be customized.)
 * GUI Editor with live preview
