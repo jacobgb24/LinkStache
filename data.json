@@ -4,43 +4,52 @@
     "name": "LinkStache",
     "bio": "A LinkTree clone using Mustache templates"
   },
-  "links": [
+  "blocks": [
     {
-      "section": "Project Links"
+      "block": "header",
+      "text": "Project Links"
     },
     {
+      "block": "link",
       "text": "Github",
       "link": "https://github.com/jacobgb24/LinkStache",
       "icon": "fa-brands fa-github"
     },
     {
+      "block": "link",
       "text": "GUI Editor",
       "link": "gui_editor.html",
       "icon": "fa-solid fa-shapes"
     },
     {
-      "section": "Tools Used"
+      "block": "header",
+      "text": "Tools Used"
     },
     {
+      "block": "link",
       "text": "Mustache Templates",
       "link": "https://mustache.github.io/",
       "icon": "fa-solid fa-code"
     },
     {
+      "block": "link",
       "text": "JSON Schema",
       "link": "https://json-schema.org/",
       "icon": "fa-solid fa-list-check"
     },
     {
+      "block": "link",
       "text": "JSON Editor",
       "link": "https://github.com/json-editor/json-editor",
       "icon": "fa-solid fa-pen"
     },
     {
-      "section": "Image Example"
+      "block": "header",
+      "text": "Image Example"
     },
     {
-      "image": "https://i.imgur.com/zlxYWCJ.jpeg",
+      "block": "image",
+      "image": "https://imgur.com/SsQRaNE.png",
       "link": "https://example.com"
     }
   ],

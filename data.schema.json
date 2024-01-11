@@ -26,7 +26,7 @@
                 "name"
             ]
         },
-        "links": {
+        "blocks": {
             "type": "array",
             "title": "Links",
             "format": "table",
@@ -36,6 +36,10 @@
                         "type": "object",
                         "title": "Link",
                         "properties": {
+                            "block": {
+                                "enum": ["link"],
+                                "$ref": "#/$defs/hidden"
+                            },
                             "text": {
                                 "description": "Text to show for link",
                                 "$ref": "#/$defs/nonEmptyString"
@@ -60,7 +64,11 @@
                         "type": "object",
                         "title": "Section Header",
                         "properties": {
-                            "section": {
+                            "block": {
+                                "enum": ["header"],
+                                "$ref": "#/$defs/hidden"
+                            },
+                            "text": {
                                 "description": "Section header text",
                                 "$ref": "#/$defs/nonEmptyString"
                             }
@@ -71,6 +79,10 @@
                         "type": "object",
                         "title": "Image",
                         "properties": {
+                            "block": {
+                                "enum": ["image"],
+                                "$ref": "#/$defs/hidden"
+                            },
                             "image": {
                                 "description": "Image to show",
                                 "format": "url",
@@ -84,7 +96,8 @@
                         },
                         "required": ["image"]
                     }
-                ]
+                ],
+                "required": ["block"]
             }
         },
         "iconLinks": {
@@ -233,6 +246,11 @@
         "nonEmptyString": {
             "type": "string",
             "minLength": 1
+        },
+        "hidden": {
+            "options": {
+                "hidden": true
+            }
         }
     }
 }

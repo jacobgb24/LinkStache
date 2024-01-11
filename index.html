@@ -28,12 +28,11 @@
         </div>
 
         <div id="links">
-            {{#links}}
-                {{#section}}
-                    <h3 class="link-header">{{section}}</h3>
-                {{/section}}
-                {{^section}}
-                {{#image}}
+            {{#blocks}}
+                {{#headerBlock}}
+                    <h3 class="link-header">{{text}}</h3>
+                {{/headerBlock}}
+                {{#imageBlock}}
                     <!-- only add a tag if there is a link -->
                     {{#link}}
                         <a href="{{link}}">
@@ -43,15 +42,15 @@
                     {{^link}}
                         <img class="link-image" src="{{image}}"></img>
                     {{/link}}
-                {{/image}}
-                {{^image}}
+                {{/imageBlock}}
+                {{#linkBlock}}
                     <a class="link-item" href="{{link}}">
                         <i class="{{icon}} fa-{{style.iconSize}}"></i>
                         <span>{{text}}</span>
                     </a>
-                {{/image}}
-                {{/section}}
-            {{/links}}
+                {{/linkBlock}}
+
+            {{/blocks}}
         </div>
     </script>
     

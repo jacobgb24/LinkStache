@@ -5,6 +5,9 @@ let styleElem = document.createElement('style');
 
 document.addEventListener('DOMContentLoaded', () => {
     Promise.all([dataFetch, cssFetch]).then(([data, css]) => {
+        // translate block type to a boolean for mustache to switch on
+        data.blocks.forEach(b => b[b.block + "Block"] = true)
+
         document.title = data.profile.name;
 
         styleElem.innerHTML = Mustache.render(css, data.style);
