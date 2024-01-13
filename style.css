@@ -1,6 +1,6 @@
  /* initially based on https://github.com/johnggli/linktree/blob/master/style.css */
  /* Use underscores for mustache since curly braces cause issues:  {{=__ __=}} */
- @import url('https://fonts.googleapis.com/css?family=__font__:500,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=__font__:400,700&display=swap');
 
 
 :root {
@@ -51,7 +51,7 @@ body {
 .profile-name {
     color: var(--button-color);
     font-size: 1.25rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.25;
     display: block;
     font-family: var(--font);
@@ -64,7 +64,7 @@ body {
 .profile-bio {
     color: var(--button-color);
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1.25;
     display: block;
     margin-top: 4px;
@@ -74,7 +74,7 @@ body {
     text-decoration: none;
 }
 
-#links {
+#blocks {
     margin: 0px auto;
     max-width: 675px;
     width: 100%;
@@ -85,17 +85,18 @@ body {
     position: relative;
     background-color: transparent;
     color: var(--button-color);
+    font-weight: 700;
     font-size: 1rem;
     text-align: center;
     display: block;
     margin: 20px 10px 0px;
-    padding: 10px; 
+    padding: 16px; 
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
 
 .text-block {
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 0;
 }
 
@@ -116,9 +117,7 @@ body {
     font-size: 1rem;
     text-align: center;
     display: block;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
     padding: 16px;
     font-weight: 500;
     text-decoration: none;
@@ -143,7 +142,7 @@ body {
     background-color: transparent;
     color: var(--button-color);
     display: block;
-    padding: 10px;
+    margin: 16px;
 }
 
 #icon-links {
