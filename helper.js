@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // for gui_editor preview. Only allow from own origin
 window.addEventListener('message', event => {
-    if (window.location.origin === event.origin) {
+    if (window.location.origin === event.origin && event.data.profile) {
         render(event.data)
         console.log(event)
         cssFetch.then(css => {

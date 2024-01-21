@@ -79,6 +79,7 @@
     "font": "Karla",
     "gradientBg": true,
     "bgColor": "#01092c",
+    "bgColor2": "#4dd6ff",
     "buttonColor": "#eeeeee",
     "iconSize": "xl",
     "iconLinksTop": false

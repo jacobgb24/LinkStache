@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@json-editor/json-editor@latest/dist/jsoneditor.min.js"></script>
     <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/culori"></script>
     <script>
         let dataFetch = fetch('./data.json').then((response) => response.json());
         let schemaFetch = fetch('./data.schema.json').then((response) => response.json());
@@ -21,8 +22,6 @@
         function setup(data, schema) {
             var editor = new JSONEditor(document.getElementById('editor_holder'), {
                 schema: schema,
-                startval: data,
-
                 disable_edit_json: true,
                 disable_properties: true,
                 disable_collapse: true,
@@ -43,6 +42,47 @@
                 }
             });
 
+            editor.on('ready', function() {                
+                if (Object.keys(data).length !== 0) {
+                    editor.setValue(data)
+                }
+                editor.watch('root.style.gradientBg', () => setGradientSecondColor(data, editor));
+                editor.watch('root.style.bgColor', () => setGradientSecondColor(data, editor));
+            });
+
+        }
+
+        function setGradientSecondColor(data, editor) {
+            try {
+                if (!editor.getEditor("root.style.gradientBg").getValue())
+                    return;
+                const bgColor = editor.getEditor('root.style.bgColor').getValue();
+                if (bgColor == data.style.bgColor &&  editor.getEditor('root.style.bgColor2') !== null
+                        && editor.getEditor('root.style.bgColor2').getValue() !== "#000000")
+                    return;
+                
+                const hslBase = culori.converter("hsl")(bgColor)
+                const hslSecond = calculateSecondColor(hslBase)
+                editor.getEditor("root.style.bgColor2").setValue(culori.formatHex(hslSecond))
+
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        function calculateSecondColor(firstColor) {
+            // this is somewhat close to what linktree does. Not clear how the saturation is calculated
+            // hue and  lightness are generally near the average changes used below
+            h = (360 + firstColor.h - 35) % 360
+            if (firstColor.s == 1 || firstColor.s == 0) {
+                s = firstColor.s
+            }
+            else {
+                s = Math.min(1, Math.max(0, firstColor.l < 0.45 ? firstColor.s - .15 : firstColor.s + .2))
+            }
+            l = Math.min(firstColor.l + 0.15, 1)
+
+            return {"mode": "hsl", "h": h, "s": s, "l": l}
         }
     </script>
     <style>

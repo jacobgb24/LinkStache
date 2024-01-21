@@ -221,6 +221,13 @@
                     "type": "string",
                     "format": "color"
                 },
+                "bgColor2": {
+                    "title": "Second Background Color",
+                    "description": "Secondary color for gradient",
+                    "type": "string",
+                    "format": "color",
+                    "$ref": "#/$defs/hidden"
+                },
                 "buttonColor": {
                     "title": "Button Color",
                     "description": "Color to use for text and button backgrounds",

@@ -5,6 +5,7 @@
 
 :root {
     --bg-color: __bgColor__;
+    --bg-color2: __bgColor2__;
     --button-color: __buttonColor__;
     --font: '__font__', sans-serif;
 
@@ -24,7 +25,7 @@ body {
     min-height: 100vh;
     font-family: var(--font);
     /* __#gradientBg__ */
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2),  transparent) var(--bg-color);
+    background: linear-gradient(var(--bg-color), var(--bg-color2));
     /*__/gradientBg__ __^gradientBg__ */
     background: var(--bg-color);
     /* __/gradientBg__ */
